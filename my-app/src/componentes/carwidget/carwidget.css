@@ -1,0 +1,9 @@
+
+
+.carwidget{
+    display:flex;
+    width: 33.33%;
+    align-items: center;
+    justify-content: center;
+    
+}

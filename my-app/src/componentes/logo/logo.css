@@ -1,0 +1,33 @@
+
+.logotipo{
+
+    display: flex;
+    width: 33.33%;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+
+
+.logo {
+
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.logo a {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+
+    color: black;
+
+
+}

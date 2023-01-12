@@ -3,6 +3,7 @@ import './navbar.css';
 import Logo from '../logo/logo';
 import Carwidget from '../carwidget/carwidget';
 
+
  const NavBar = () => {
 
     return(
@@ -15,7 +16,7 @@ import Carwidget from '../carwidget/carwidget';
                 <li><a href='#'>modelo</a></li>
                 </ul>   
                 <Carwidget/>
-            </nav>  
+            </nav> 
         </>
     )
 

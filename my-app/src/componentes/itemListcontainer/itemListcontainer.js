@@ -17,30 +17,37 @@ const ItemListcontainer =( {greeting}) => {
     }
 // el useEffect se usa para tareas que no quieras que se este repitiendo
 // el useEffect sin dependencias se va a repetir como cualquier consol.log
-    useEffect ( ()=>{
-      console.log("hola dentro del primer efecto")
-    })
-//el useEffect con temendencias solo se repetira una unica vez
-    useEffect (()=>{
-      console.log ("gola desde el efecto con array de dependencias vacio")
-    }, []) // <----Arreglo de dependencias
+//     useEffect ( ()=>{
+//       console.log("hola dentro del primer efecto")
+//     })
+// //el useEffect con temendencias solo se repetira una unica vez
+//     useEffect (()=>{
+//       console.log ("gola desde el efecto con array de dependencias vacio")
+//     }, []) // <----Arreglo de dependencias
 
-    useEffect (()=>{
-      console.log ("hola desde el efecto con arreglo de dependencias a la escucha de NUM")
-    } , [ num ]) // <----- Arreglo de dependencias a la escucha de una variable
+//     useEffect (()=>{
+//       console.log ("hola desde el efecto con arreglo de dependencias a la escucha de NUM")
+//     } , [ num ]) // <----- Arreglo de dependencias a la escucha de una variable
 
-    console.log(isDark)
+    // console.log(isDark)
 
     const onAdd = () => {
       console.log("hola")
     }
 //Es una promesa con las palabras reservadas new , Promise
 //es una tarea asincrona
+//recuerda que con useEffect ya no se va a estar repitiendo el estado.
+useEffect ( ()=>{
+
     const task = new Promise ((resolve , reject)=>{
-      resolve(products)
+
+      setTimeout(()=>{
+        resolve(products)
+      }, 5000)
+      
     })//nunca desde front-end vendran las promesas
 
-    console.log ("Esta es la promesa", task)
+    // console.log ("Esta es la promesa", task)
 
     task
       //set items me va a setear mi estado con eso que venga en la respuesta
@@ -48,6 +55,8 @@ const ItemListcontainer =( {greeting}) => {
       .catch((err)=>{console.log("se rechazo")})
     //se aplica a una promesa para capturar lo que la promesa resolvio
     // se aplica para obtener lo que una promesa me lo devolvio como error
+    console.log("se hizo la peticion")
+  } , [])
 
     console.log(items)
 

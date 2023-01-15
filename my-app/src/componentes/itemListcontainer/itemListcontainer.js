@@ -24,7 +24,7 @@ const ItemListcontainer =( {greeting}) => {
 
     useEffect (()=>{
       console.log ("hola desde el efecto con arreglo de dependencias a la escucha de NUM")
-    } , [ num ]) // <----- Arreglo de dependencias
+    } , [ num ]) // <----- Arreglo de dependencias a la escucha de una variable
 
     console.log(isDark)
 

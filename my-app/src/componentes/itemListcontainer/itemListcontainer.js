@@ -6,7 +6,7 @@ import { products } from "../../productsMock";
 
 const ItemListcontainer =( {greeting}) => {
     //Flag o Bandera
-    const [ isDark , setIsDark ] = useState(false)
+    const [ isDark ,setIsDark  ] = useState(false)
     const [ num , setNum] = useState(0)
     const [ items , setItems] = useState([])//se recomienda siempre usar el tipo de dato con el que vamos a empezar
 
@@ -43,7 +43,7 @@ useEffect ( ()=>{
 
       setTimeout(()=>{
         resolve(products)
-      }, 5000)
+      }, 2000)
       
     })//nunca desde front-end vendran las promesas
 
@@ -63,11 +63,15 @@ useEffect ( ()=>{
     return (
     //Para hacer un un modo oscuro podemos reducir linreas de codigo de la siguiente manera
     <div className= {isDark ? "container-items-dark" : "container-items-ligth"}>
-    <h2>{greeting}</h2> 
+    {/* <h2>{greeting}</h2> 
     <button onClick={toogleMode}>{isDark ? "cambiar a modo claro" : "cambiar a modo oscuro"}</button>
 
     <button onClick={()=>setNum(num+1)}>sumar</button>
-    <Counter stock = {10} initial = {1} onAdd = {onAdd}/>
+    <Counter stock = {10} initial = {1} onAdd = {onAdd}/> */}
+
+
+
+    
     </div>
   )
 }
